@@ -6,9 +6,9 @@ First, I installed svelte kit
 npm create svelte@latest store-bug
 ```
 
-Then, I edited `src/routes/+page.svelte` to set a context containing a store.
+Then, I edited [`src/routes/+page.svelte`](/src/routes/+page.svelte) to set a context containing a store.
 
-Lastly, I created `src/routes/ChildComponent.svelte` that gets the context containing the store, and subscribes to it.
+Lastly, I created [`src/routes/ChildComponent.svelte`](/src/routes/ChildComponent.svelte) that gets the context containing the store, and subscribes to it.
 
 Then, run with
 
@@ -42,11 +42,11 @@ Compare those console logs with those seen on the browser, which I would conside
 
 ```
 setting the context in the parent
-ChildComponent.svelte:7 getting the context in component 1
-+page.svelte:16 calculating the derived store, attempt 1
-ChildComponent.svelte:7 getting the context in component 2
-ChildComponent.svelte:7 getting the context in component 3
-ChildComponent.svelte:7 getting the context in component 4
+getting the context in component 1
+calculating the derived store, attempt 1
+getting the context in component 2
+getting the context in component 3
+getting the context in component 4
 ```
 
 # Why am I putting a store in a context?
